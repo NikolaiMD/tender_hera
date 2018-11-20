@@ -1,0 +1,137 @@
+body{
+  background-color: #2F3238;
+}
+#box{
+  position: relative;
+  left: 450px;
+  top: 150px;
+  width: 480px;
+  height: 360px;
+}
+/*******************************ЗАТЕМНЕНИЕ*************************************/
+#box>figure::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 360px;
+  background-color: #221e60;
+  opacity: 0.4;
+}
+/*******************************ЗАТЕМНЕНИЕ*************************************/
+/***********************************РОМБ***************************************/
+#box figure figcaption::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  opacity: 0;
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+#box:hover figure figcaption::before{
+  margin-top: -100px;
+  margin-left: -100px;
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+/***********************************РОМБ***************************************/
+/*********************************FIGCAPTION***********************************/
+#box figure figcaption{
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 360px;
+}
+/*********************************FIGCAPTION***********************************/
+/***********************************TEXT***************************************/
+#box figure figcaption h2{
+  position: absolute;
+  text-align: center;
+  line-height: 360px;
+  width: 480px;
+  height: 360px;
+  font-family: arial;
+  font-weight: lighter;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+  transition: 0.4s;
+}
+#box:hover figure figcaption h2{
+  font-size: 22px;
+  transition: 0.4s;
+  opacity: 0;
+}
+#box figure figcaption h2 span{
+  font-weight: 750;
+}
+/***********************************TEXT***************************************/
+/***********************************UL*****************************************/
+#box> figure figcaption ul{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+  width: 200px;
+  height: 200px;
+  transition: 0.3s;
+}
+#box:hover figure figcaption ul{
+  transform: scale(0.3);
+  transition: 0.3s;
+}
+/***********************************UL*****************************************/
+/***********************************LI*****************************************/
+#box> figure figcaption ul>li{
+  position: absolute;
+  list-style: none;
+  transition: 0.3s;
+  opacity: 0;
+}
+#box:hover ul>li{
+  transform: scale(3);
+  transition: 0.3s;
+  opacity: 1;
+}
+#box> figure figcaption ul>li:nth-child(1){
+  top: 0;
+  left: 0;
+}
+#box> figure figcaption ul>li:nth-child(2){
+  top: 0;
+  right: 0;
+}
+#box> figure figcaption ul>li:nth-child(3){
+  bottom: 0;
+  left: 0;
+}
+#box> figure figcaption ul>li:nth-child(4){
+  right: 0;
+  bottom: 0;
+}
+/**********************************LI******************************************/
+/********************************ССЫЛКИ****************************************/
+#box> figure figcaption ul>li>a{
+  color: white;
+  font-size: 25px;
+}
+#box> figure figcaption ul>li>a:hover{
+  color: grey;
+}
+/********************************ССЫЛКИ****************************************/
